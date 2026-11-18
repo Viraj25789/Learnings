@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+    </div>   
+     <ul class="language">
+        <li class="ul-list">java</li>
+        <li class="ul-list">python</li>
+    </ul>
+</body>
+<script>
+
+// add element 
+
+// function addlang(langname) {
+//     const li = document.createElement('li');
+//     li.innerHTML = `${langname}`
+
+//     document.querySelector('.language').appendChild(li)
+// }
+// addlang('c++')
+// addlang('ruby')
+// // use above metod for small / not optimize for big project data , because tree travelsor is complex to travel to child and root is more complex.
+
+
+// // optimize approach
+// function addlang(langname) {
+//     const li = document.createElement('li');
+
+//     li.appendChild(document.createTextNode(langname))
+
+//     document.querySelector('.language').appendChild(li)
+    
+//     addlang('c++')
+//     addlang('ruby')
+// }
+// use this here no tree tavelsor direct append, no make var, so space opti also.
+
+
+
+// edit 
+
+// const seclang = document.querySelector('li:nth-child(2)')  //2nd py edit
+
+// // seclang.innerHTML = 'xxx'  // work / not optimiz for large
+
+// const newli = document.createElement('li')
+// newli.textContent = 'xxx'
+// seclang.replaceWith(newli)
+// // optimized approach
+
+// // 1st jv edit
+// const firstlang = document.querySelector('li:first-child')
+
+// firstlang.outerHTML="<li> javaxxx </li>"
+
+
+
+// // remove
+// const lastlang = document.querySelector("li:last-child")
+// lastlang.remove()
+
+
+
+
+</script>
+</html>

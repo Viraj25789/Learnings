@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thusday</div>
+        <div class="day">friday</div>
+        <div class="day">saturdau</div>
+        <div class="day">sunday</div>
+    </div>
+</body>
+<script>
+
+
+// const parent=document.querySelector(".parent")
+
+// console.log(parent);    
+// // <div class="parent"></div>
+
+// console.log(parent.children);
+// // HTMLCollection(7) [div.day, div.day, div.day, div.day, div.day, div.day, div.day]
+
+// console.log(parent.children[0].innerHTML);
+// // monday
+
+// for (let i = 0; i < parent.children.length; i++) {
+//    console.log(parent.children[i].innerHTML);  
+// } 
+
+// parent.children[1].style.color='pink'
+
+// console.log(parent.firstElementChild);
+// // <div class="day">monday</div>
+
+// console.log(parent.lastElementChild);
+// // <div class="day">sunday</div>
+
+// above parent to child
+
+// child to parent
+
+// const dayone = document.querySelector('.day')
+
+// console.log(dayone.parentElement);
+// // <div class="parent">…</div>
+
+// console.log(dayone.nextElementSibling);
+// // <div class="day">tuesday</div>
+
+// console.log(dayone.pastElementSibling);
+// // <div class="day">sunday</div>
+
+
+// console.log('nodes: ', parent.childNodes);
+// // nodes:  NodeList(15) [text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text, div.day, text]0: text1: div.day2: text3: div.day4: text5: div.day6: text7: div.day8: text9: div.day10: text11: div.day12: text13: div.day14: textlength: 15[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+
+// 15 conts jova node list na. 
+
+
+// ---------------------------------------
+
+// creating 
+
+// const div= document.createElement('div')
+// console.log(div);
+// <div></div>
+
+// div.className='main'
+// div.id='main-id'
+// <div class="main" id="main-id"></div>
+
+// div.id= Math.round(Math.random() * 10 +1);
+// generate random id
+
+
+// generate own attributes 
+
+// div.setAttribute('title','generate-title')
+// //key value 
+// //  <div class="main" id="main-id" title="generate-title"></div>
+
+// div.style.backgroundColor='green'
+// // <div class="main" id="main-id" title="generate-title" style="background-color: green;"></div>
+
+
+// // div.innerText='chai aur code' 
+// // or
+// const addtext = document.createTextNode('chai aur code')
+// div.appendChild(addtext)
+
+
+// display karava / attech on document
+
+// document.body.appendChild(div)
+// // <div class="main" id="main-id" title="generate-title" style="background-color: green;">chai aur code</div>
+
+</script>
+</html>
