@@ -1,0 +1,20 @@
+# Python bytecode and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local environment secrets
+.env
+.env.*
+!.env.example
+
+# Local databases (existing tracked database files are preserved)
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary editor and runner files
+tempCodeRunnerFile.py
+.DS_Store
