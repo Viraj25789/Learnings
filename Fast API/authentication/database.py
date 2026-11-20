@@ -1,8 +1,9 @@
+import os
 import sqlite3
 from pathlib import Path
 
 
-DATABASE_PATH = Path(__file__).resolve().with_name("user.db")
+DATABASE_PATH = Path(os.environ.get("AUTH_DATABASE_PATH", Path(__file__).resolve().with_name("user.db")))
 
 conn = sqlite3.connect(DATABASE_PATH, check_same_thread=False)
 conn.row_factory = sqlite3.Row
