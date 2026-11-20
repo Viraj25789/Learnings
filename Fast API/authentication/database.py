@@ -1,22 +1,21 @@
 import sqlite3
-
-try:
-    conn = sqlite3.connect("user.db",check_same_thread=False)
-    cursor = conn.cursor()
-    print("db created.")
-except Exception as e:
-    print("error in db create",e)
+from pathlib import Path
 
 
-try:
-    cursor.execute("""  CREATE TABLE IF NOT EXISTS users(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TXT,
-            email TEXT UNIQUE,
-            password TEXT)
-            """)
-    conn.commit()
-    print("table succesfull")
-except Exception as e:
-    print("table not created",e)
+DATABASE_PATH = Path(__file__).resolve().with_name("user.db")
 
+conn = sqlite3.connect(DATABASE_PATH, check_same_thread=False)
+conn.row_factory = sqlite3.Row
+cursor = conn.cursor()
+
+cursor.execute(
+    """
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL
+    )
+    """
+)
+conn.commit()
